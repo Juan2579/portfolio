@@ -4,7 +4,8 @@ import { Home } from "./containers/Home"
 import { Main } from "./layout/Main"
 import { useEffect, useState } from "react"
 import { Loader } from "./layout/Loader"
-import { TitleHome } from "./components/TitleHome"
+import { ContentHome } from "./components/ContentHome"
+import { AboutMe } from "./containers/AboutMe"
 
 export const App = () => {
   const [showLoader, setShowLoader] = useState(true)
@@ -37,8 +38,10 @@ export const App = () => {
 
             <Main>
               <Home>
-                <TitleHome showApp={showApp} />
+                <ContentHome showApp={showApp} />
               </Home>
+
+              <AboutMe />
             </Main>
           </div>
       }

@@ -23,6 +23,11 @@
   filter: blur(15px);
 }
 
+/* navbar classes */
+.first-load{
+	animation: first-load 2s;
+}
+
 /* home classes */
 .remove{
 	animation: scale-display--reversed 1.4s
@@ -32,6 +37,7 @@
 	animation: scale-display 1s
 }
 
+/* home h1 classes */
 .letters{
   white-space: nowrap;
   overflow: hidden;
@@ -47,3 +53,5 @@
 .role-animation{
   animation: letters-animation 2.5s steps(60, end);
 }
+
+/*home buttons classes */

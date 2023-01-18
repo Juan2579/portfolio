@@ -11,7 +11,7 @@ export const NavMobile = ({ navRef, showMenu }) => {
         >
           <li>
             <a
-              className="transition-all duration-300 hover:text-[#EB268F]"
+              className="first-load transition-all duration-300 hover:text-[#EB268F]"
               href="#"
             >
               Sobre mí
@@ -19,19 +19,19 @@ export const NavMobile = ({ navRef, showMenu }) => {
           </li>
           <li>
             <a
-              className="duration-300 hover:text-[#EB268F]"
+              className="first-load transition-all duration-300 hover:text-[#EB268F]"
               href="#habilidades"
             >
               Habilidades
             </a>
           </li>
           <li>
-            <a className="duration-300 hover:text-[#EB268F]" href="#">
+            <a className="first-load transition-all duration-300 hover:text-[#EB268F]" href="#">
               Proyectos
             </a>
           </li>
           <li>
-            <a className="duration-300 hover:text-[#EB268F]" href="#">
+            <a className="first-load transition-all duration-300 hover:text-[#EB268F]" href="#">
               Contáctame
             </a>
           </li>

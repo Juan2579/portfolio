@@ -3,21 +3,27 @@ import { useEffect, useState } from "react"
 export const useLettersAnimation = () => {
   const [showName, setShowName] = useState(false)
   const [showRole, setShowRole] = useState(false)
+  const [showButtons, setShowButtons] = useState(false)
   
   useEffect(() => {
     setTimeout(() => {
-      // console.log("Ya salió el hola")
       setShowName(true)
+      // console.log("Ya salió el hola")
 
       setTimeout(() => {
-        // console.log("ya salio el name")
         setShowRole(true)
+        // console.log("ya salio el name")
+        setTimeout(() => {
+          console.log("ya salio el rol")
+          setShowButtons(true)
+        }, 1700)
       }, 2000)
     }, 2200)
   }, [])
 
   return {
     showName,
-    showRole
+    showRole, 
+    showButtons
   }
 }

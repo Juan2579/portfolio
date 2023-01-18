@@ -41,7 +41,32 @@
 	}
 }
 
+@keyframes first-load {
+	0% {
+		opacity: 0;
+	}
+
+	50%{
+		opacity: 0.5;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
 /* animation h1 words */
 @keyframes letters-animation{ 
   from { width: 0; } 
 } 
+
+/* animation buttons home */
+@keyframes buttons-animation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
