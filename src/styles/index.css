@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* spinner classes*/
+.spinner {
+  background-image: linear-gradient(rgb(186, 66, 255) 35%,rgb(0, 225, 255));
+  width: 100px;
+  height: 100px;
+  animation: spinning 1.7s linear infinite;
+  text-align: center;
+  border-radius: 50px;
+  box-shadow: 0px -5px 20px 0px rgb(186, 66, 255), 0px 5px 20px 0px rgb(0, 225, 255);
+  transition: all 1s ease-out;
+}
+.spinner1 {
+  background-color: rgb(36, 36, 36);
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  filter: blur(15px);
+}
+
+/* home classes */
+.remove{
+	animation: scale-display--reversed 1.4s
+}
+
+.onLoad{
+	animation: scale-display 1s
+}
+
+.letters{
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+
+.greeting-animation{
+  animation: letters-animation 4s steps(60, end);
+}
+.name-animation{
+  animation: letters-animation 2s steps(60, end);
+}
+.role-animation{
+  animation: letters-animation 2.5s steps(60, end);
+}
