@@ -7,7 +7,7 @@ export const NavMobile = ({ navRef, showMenu }) => {
       {showMenu && (
         <ul
           style={{ top: heightNav }}
-          className="absolute w-full flex justify-center items-center flex-col gap-10 text-white bg-[#2C1A8A] font-mono border-b-2 py-8 text-lg"
+          className="absolute w-full flex justify-center items-center flex-col gap-10 text-white bg-[#2C1A8A] font-mono border-b-2 py-8 text-lg z-20"
         >
           <li>
             <a

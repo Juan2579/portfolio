@@ -45,7 +45,7 @@
 }
 
 .greeting-animation{
-  animation: letters-animation 4s steps(60, end);
+  animation: letters-animation 2s steps(60, end);
 }
 .name-animation{
   animation: letters-animation 2s steps(60, end);
@@ -54,4 +54,15 @@
   animation: letters-animation 2.5s steps(60, end);
 }
 
-/*home buttons classes */
+
+@media (max-width: 331px) {
+  .home-text{
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .greeting-animation{
+    animation: letters-animation 4s steps(60, end);
+  }
+}

@@ -14,9 +14,9 @@ export const useLettersAnimation = () => {
         setShowRole(true)
         // console.log("ya salio el name")
         setTimeout(() => {
-          console.log("ya salio el rol")
+          //console.log("ya salio el rol")
           setShowButtons(true)
-        }, 1700)
+        }, 2400)
       }, 2000)
     }, 2200)
   }, [])
