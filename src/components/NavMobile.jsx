@@ -12,7 +12,7 @@ export const NavMobile = ({ navRef, showMenu }) => {
           <li>
             <a
               className="first-load transition-all duration-300 hover:text-[#EB268F]"
-              href="#"
+              href="#aboutme"
             >
               Sobre mí
             </a>
@@ -20,7 +20,7 @@ export const NavMobile = ({ navRef, showMenu }) => {
           <li>
             <a
               className="first-load transition-all duration-300 hover:text-[#EB268F]"
-              href="#habilidades"
+              href="#skills"
             >
               Habilidades
             </a>

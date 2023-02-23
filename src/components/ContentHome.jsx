@@ -47,7 +47,7 @@ export const ContentHome = ({showApp}) => {
               lg:max-w-[300px] lg:max-h-[200px]
               z-20' src="/assets/images/robot.png" alt="Profile image animated" />
           </div>
-          <a className='absolute bottom-5' href="">
+          <a className='absolute bottom-5' href="#aboutme">
             <svg className='w-12  text-white  fill-current first-load transition-all duration-300 md:w-16 hover:text-[#ed05f9]' viewBox="0 0 66.915 66.915" >
               <g>
                 <g>

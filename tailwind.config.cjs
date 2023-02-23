@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "bgHome": "url('https://live.staticflickr.com/65535/52633984221_f55a65a41f_k.jpg')"
+        "bgHome": "url('https://live.staticflickr.com/65535/52633984221_f55a65a41f_k.jpg')",
+        "personalImage": "url('/assets/images/profile.jpeg')"
       },
       fontFamily: {
         "orbitron": ['Orbitron', 'sans-serif']
