@@ -54,10 +54,68 @@
   animation: letters-animation 2.5s steps(60, end);
 }
 
+.home-buttons{
+  width: 144px;
+}
+
+.box-animation{
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 200px;
+  max-height: 200px;
+
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.box-animation::before{
+  content: "";
+  position: absolute;
+  inset: -50px -50px;
+  background: linear-gradient(315deg, #00ccff, #d400d4);
+  transition: all 0.5s;
+  animation: rotating 4s linear infinite;
+}
+.box-animation::after{
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: 9px;
+  background-color: #160d45;
+  z-index: 1;
+}
 
 @media (max-width: 331px) {
   .home-text{
     font-size: 20px;
+  }
+}
+@media (max-width: 365px) {
+  .home-buttons{
+    max-width: 120px;
+  }
+}
+@media (min-width: 332px) and (max-width:450px ) {
+  .home-text{
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 700px) {
+  .box-animation{
+    min-width: 170px;
+    min-height: 200px;
+    max-width: 450px;
+    max-height: 400px;
+  }
+}
+
+@media (min-width: 1024px){
+  .box-animation{
+    min-width: 350px;
+    min-height: 300px;
+    max-width: 500px;
+    max-height: 550px;
   }
 }
 
@@ -66,3 +124,4 @@
     animation: letters-animation 4s steps(60, end);
   }
 }
+
