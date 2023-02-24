@@ -10,6 +10,8 @@ import { AboutMe } from "./containers/AboutMe"
 import { ContentAboutMe } from "./components/ContentAboutMe"
 import { Skills } from "./containers/Skills"
 import { ContentSkills } from "./components/ContentSkills"
+import { Projects } from "./containers/Projects"
+import { ContentProjects } from "./components/ContentProjects"
 
 export const App = () => {
   const [showLoader, setShowLoader] = useState(true)
@@ -53,6 +55,10 @@ export const App = () => {
               <Skills>
                 <ContentSkills />
               </Skills>
+
+              <Projects>
+                <ContentProjects />
+              </Projects>
 
             </Main>
           </div>
