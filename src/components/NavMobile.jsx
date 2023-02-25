@@ -26,12 +26,12 @@ export const NavMobile = ({ navRef, showMenu }) => {
             </a>
           </li>
           <li>
-            <a className="first-load transition-all duration-300 hover:text-[#EB268F]" href="#">
+            <a className="first-load transition-all duration-300 hover:text-[#EB268F]" href="#projects">
               Proyectos
             </a>
           </li>
           <li>
-            <a className="first-load transition-all duration-300 hover:text-[#EB268F]" href="#">
+            <a className="first-load transition-all duration-300 hover:text-[#EB268F]" href="#contact">
               Contáctame
             </a>
           </li>

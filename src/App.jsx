@@ -12,6 +12,8 @@ import { Skills } from "./containers/Skills"
 import { ContentSkills } from "./components/ContentSkills"
 import { Projects } from "./containers/Projects"
 import { ContentProjects } from "./components/ContentProjects"
+import { Contact } from "./containers/Contact"
+import { ContentContact } from "./components/ContentContact"
 
 export const App = () => {
   const [showLoader, setShowLoader] = useState(true)
@@ -59,6 +61,10 @@ export const App = () => {
               <Projects>
                 <ContentProjects />
               </Projects>
+
+              <Contact>
+                <ContentContact />
+              </Contact>
 
             </Main>
           </div>

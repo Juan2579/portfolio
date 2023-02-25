@@ -32,11 +32,11 @@ export const ContentHome = ({showApp}) => {
               md:w-48 md:text-xl md:h-16 
               hover:opacity-50' 
               type='button'>Currículum</button>
-              <button className='
-              onLoad home-buttons h-14 bg-[#160d45] rounded-lg border-2 transition-all duration-350
+              <a href='#contact' className='
+              onLoad home-buttons h-14 bg-[#160d45] rounded-lg border-2 transition-all duration-350 text-center p-[13px] md:p-4
               md:w-48 md:text-xl md:h-16  
-              hover:opacity-50' 
-              type='button'>Contacto</button>
+              hover:opacity-50'>
+              Contacto</a>
             </div>
             }
           </div>
