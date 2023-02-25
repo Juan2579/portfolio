@@ -14,7 +14,7 @@ export const ContentProjects = () => {
               <p className='text-lg font-bold md:text-xl lg:text-2xl'>{project.name}</p>
               <p className='text-base sm:text-base md:text-lg text-gray-300'>{project.description}</p>
               <div className='w-4/5 max-h-[300px] max-w-[250px]  lg:min-w-[400px] lg:min-h-[300px] 2xl:min-w-[400px] 2xl:min-h-[300px] border-4 rounded-xl overflow-hidden'>
-                <img className=' transition-all duration-300 hover:scale-125' 
+                <img className='w-full h-full lg:min-w-[400px] lg:min-h-[300px] 2xl:min-w-[400px] 2xl:min-h-[300px]  transition-all duration-300 hover:scale-125' 
                   src={srcImage === "mobile" ? project.mobilePath : project.desktopPath} 
                   alt={project.name}
                 />             
