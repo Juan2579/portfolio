@@ -305,3 +305,9 @@
     width: 100%;
   }
 }
+
+@media (min-width: 1680px){
+  .skills-list{
+    width: 95%
+  }
+}

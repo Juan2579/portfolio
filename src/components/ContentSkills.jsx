@@ -12,7 +12,7 @@ export const ContentSkills = () => {
           </p>
           <img className='skills-image hidden w-[500px] h-[300px] lg:inline-block lg:mx-auto' src="/assets/images/technologyIlustration.png" alt="Technologies ilustration" />
         </div>
-        <ul className='w-full h-full flex justify-center items-center flex-wrap gap-3 lg:pb-10'>
+        <ul className='skills-list w-full h-full flex justify-center items-center flex-wrap gap-3 lg:pb-10'>
           {technologies.map((technology, index) => {
             return (
               <li key={`${technology.name}-${index}`} className='technology-shadow w-32 h-40 relative flex flex-col gap-1 justify-center items-center bg-[#310a51] rounded-lg z-10 transition-all duration-500 opacity-100 md:w-36 md:h-44 md:hover:scale-110 md:hover:mx-3 xl:hover:mx-6'>
