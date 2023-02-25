@@ -40,9 +40,7 @@ export const App = () => {
         <Loader hidingLoader={hidingLoader}/>
         : 
           <div className="onLoad">
-            <Header>
-              <Nav />
-            </Header>
+            <Header />
 
             <Main>
               

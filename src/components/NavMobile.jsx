@@ -1,6 +1,6 @@
 import React from "react";
 
-export const NavMobile = ({ navRef, showMenu }) => {
+export const NavMobile = ({ navRef, showMenu, setShowMenu }) => {
   const heightNav = `${navRef.current?.clientHeight}px`;
   return (
     <>
@@ -9,7 +9,7 @@ export const NavMobile = ({ navRef, showMenu }) => {
           style={{ top: heightNav }}
           className="absolute w-full flex justify-center items-center flex-col gap-10 text-white bg-[#2C1A8A] font-mono border-b-2 py-8 text-lg z-20"
         >
-          <li>
+          <li onClick={() => setShowMenu(false)}>
             <a
               className="first-load transition-all duration-300 hover:text-[#EB268F]"
               href="#aboutme"
@@ -17,7 +17,7 @@ export const NavMobile = ({ navRef, showMenu }) => {
               Sobre mí
             </a>
           </li>
-          <li>
+          <li onClick={() => setShowMenu(false)}>
             <a
               className="first-load transition-all duration-300 hover:text-[#EB268F]"
               href="#skills"
@@ -25,12 +25,12 @@ export const NavMobile = ({ navRef, showMenu }) => {
               Habilidades
             </a>
           </li>
-          <li>
+          <li onClick={() => setShowMenu(false)}>
             <a className="first-load transition-all duration-300 hover:text-[#EB268F]" href="#projects">
               Proyectos
             </a>
           </li>
-          <li>
+          <li onClick={() => setShowMenu(false)}>
             <a className="first-load transition-all duration-300 hover:text-[#EB268F]" href="#contact">
               Contáctame
             </a>

@@ -13,9 +13,9 @@ export const ContentSkills = () => {
           <img className='skills-image hidden w-[500px] h-[300px] lg:inline-block lg:mx-auto' src="/assets/images/technologyIlustration.png" alt="Technologies ilustration" />
         </div>
         <ul className='w-full h-full flex justify-center items-center flex-wrap gap-3 lg:pb-10'>
-          {technologies.map((technology) => {
+          {technologies.map((technology, index) => {
             return (
-              <li className='technology-shadow w-32 h-40 relative flex flex-col gap-1 justify-center items-center bg-[#310a51] rounded-lg z-10 transition-all duration-500 opacity-100 md:w-36 md:h-44 md:hover:scale-110 md:hover:mx-3 xl:hover:mx-6'>
+              <li key={`${technology.name}-${index}`} className='technology-shadow w-32 h-40 relative flex flex-col gap-1 justify-center items-center bg-[#310a51] rounded-lg z-10 transition-all duration-500 opacity-100 md:w-36 md:h-44 md:hover:scale-110 md:hover:mx-3 xl:hover:mx-6'>
                 <div className='absolute top-0 left-0 flex items-center p-2'>
                   <div className='px-1'>
                     <span className='w-3 h-3 inline-block items-center p-1 rounded-[50%] bg-[#ff605c]'></span>
