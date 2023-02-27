@@ -127,6 +127,7 @@
   background: #271870;
   color: #fff;
   border-radius: 5px;
+  opacity: 0.6;
 }
 
 .form-button span {
@@ -162,6 +163,26 @@
   background: linear-gradient(180deg, transparent, #ed05f9);
   animation: btn-anim2 1.7s linear infinite;
   animation-delay: 0.375s;
+}
+
+.popup{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0.1);
+  visibility: hidden;
+  transition: transform 0.5s, top 0.5s;
+}
+
+.open-popup{
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%,-50%) scale(1);
+}
+
+.stop-scroll{
+  height: 100%;
+  overflow: hidden;
 }
 
 @keyframes btn-anim2 {

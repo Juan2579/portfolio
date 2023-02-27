@@ -14,6 +14,7 @@ import { Projects } from "./containers/Projects"
 import { ContentProjects } from "./components/ContentProjects"
 import { Contact } from "./containers/Contact"
 import { ContentContact } from "./components/ContentContact"
+import { FormPopUp } from "./components/FormPopUp"
 
 export const App = () => {
   const [showLoader, setShowLoader] = useState(true)
