@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Nav } from '../containers/Nav';
 
-export const Header = () => {
-  const [showNavbar, setShowNavbar] = useState(true);
+export const Header = ({showNavbar, setShowNavbar}) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   useEffect(() => {

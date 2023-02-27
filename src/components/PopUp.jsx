@@ -4,7 +4,7 @@ export const PopUp = ({ popUp, closeModal, error }) => {
   return (
     <div
       style={{ boxShadow: "0 8px 32px 0 rgb(31 38 135 / 37%" }}
-      className={`min-w-[288px] min-h-[200px] popup ${ popUp ? "open-popup" : "" } relative flex flex-col items-center gap-5 px-5 py-10 shadow-xl rounded-lg bg-[#160d45] border-2 border-white z-10 backdrop-blur-sm lg:min-w-[500px] lg:gap-12 lg:py-12`}
+      className={`min-w-[288px] min-h-[200px] popup ${ popUp ? 'open-popup' : "" } relative flex flex-col items-center gap-5 px-5 py-10 shadow-xl rounded-lg bg-[#160d45] border-2 border-white z-10 backdrop-blur-sm lg:min-w-[500px] lg:gap-12 lg:py-12`}
     >
       {error ? (
         <svg className="w-14 absolute top-[-28px] bg-red-600 rounded-[50%] border-0 fill-current text-white" viewBox="0 0 128 128">

@@ -53,7 +53,7 @@ export const ContentHomeVideo = ({showApp}) => {
           </h1>
           {showButtons && 
           <div className='w-full flex justify-start gap-8 pt-4 text-white font-bold md:pl-20'>
-            <button className='onLoad w-36 h-14 bg-[#160d45] md:w-48 md:text-xl md:h-16 rounded-lg border-2 hover:opacity-50 transition-all duration-350' type='button'>Currículum</button>
+            <a download="CV Juan Gualdron" href='/assets/docs/CVJuanGualdronSpanish.pdf' className='onLoad w-36 h-14 bg-[#160d45] md:w-48 md:text-xl md:h-16 rounded-lg border-2 hover:opacity-50 transition-all duration-350' type='button'>Currículum</a>
             <button className='onLoad w-36 h-14 bg-[#160d45] md:w-48 md:text-xl md:h-16 rounded-lg border-2 hover:opacity-50 transition-all duration-350' type='button'>Contacto</button>
           </div>
           }

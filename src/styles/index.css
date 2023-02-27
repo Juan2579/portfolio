@@ -86,7 +86,7 @@
   inset: -50px -50px;
   background: linear-gradient(315deg, #00ccff, #d400d4);
   transition: all 0.5s;
-  animation: rotating 4s linear infinite;
+  animation: rotating 3.5s linear infinite;
 }
 .box-animation::after {
   content: "";

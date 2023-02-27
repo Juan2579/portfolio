@@ -10,7 +10,7 @@ export const ContentSkills = () => {
           <p className='text-gray-300 text-md pb-4 md:text-lg lg:text-xl xl:w-full xl:text-2xl'>
             A lo largo de mi carrera como FrontEnd Developer he desarrollado habilidades en tecnologías que me permiten crear productos de alto valor, estas son algunas tecnologías con las que trabajo y me especializo:
           </p>
-          <img className='skills-image hidden w-[500px] h-[300px] lg:inline-block lg:mx-auto' src="/assets/images/technologyIlustration.png" alt="Technologies ilustration" />
+          <img className='skills-image hidden w-[500px] h-[300px] lg:inline-block lg:mx-auto' src="/assets/images/technologyIlustration.png" alt="Technologies ilustration" loading='lazy' />
         </div>
         <ul className='skills-list w-full h-full flex justify-center items-center flex-wrap gap-3 lg:pb-10'>
           {technologies.map((technology, index) => {
@@ -27,7 +27,7 @@ export const ContentSkills = () => {
                     <span className='w-3 h-3 inline-block items-center p-1 rounded-[50%] bg-[#00ca4e]'></span>
                   </div>
                 </div>
-                <img className='pt-5' src={technology.path} alt={technology.alt} />
+                <img className='pt-5' src={technology.path} alt={technology.alt} loading="lazy" />
                 <p className='text-[12px] font-orbitron font-bold'>{technology.name}</p>
               </li>
             )

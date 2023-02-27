@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import emailjs from "@emailjs/browser"
 import { FormPopUp } from './FormPopUp'
 
-export const ContentContact = () => {
+export const ContentContact = ({setShowNavbar}) => {
   const form = useRef()
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
@@ -14,11 +14,15 @@ export const ContentContact = () => {
 
   const onSubmit = async(e) => {
     e.preventDefault()
+    //hide the navbar to block the navigation
+    setShowNavbar(false)
     try {
+      //show modal
       setModal(true) 
+
+      //Reseting loading and error by default
       setError(false)
       setLoading(true)
-      //show modal
       
       //start sending email
       const send = await emailjs.sendForm(
@@ -33,7 +37,9 @@ export const ContentContact = () => {
 
       //modal with popup animation
       document.body.classList.add("stop-scroll")
-      setPopUp(true)
+      setTimeout(() => {
+        setPopUp(true)
+      }, 100)
       
       //Clean the form inputs
       setName("")
@@ -47,7 +53,9 @@ export const ContentContact = () => {
       
       //modal with popup animation
       document.body.classList.add("stop-scroll")
-      setPopUp(true)
+      setTimeout(() => {
+        setPopUp(true)
+      }, 100)
     } 
   }
   const closeModal = () => {

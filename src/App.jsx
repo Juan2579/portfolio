@@ -1,11 +1,9 @@
-import { Nav } from "./containers/Nav"
 import { Header } from "./layout/Header"
 import { Home } from "./containers/Home"
 import { Main } from "./layout/Main"
 import { useEffect, useState } from "react"
 import { Loader } from "./layout/Loader"
 import { ContentHome } from "./components/ContentHome"
-import { ContentHomeVideo } from "./containers/ContentHomeVideo"
 import { AboutMe } from "./containers/AboutMe"
 import { ContentAboutMe } from "./components/ContentAboutMe"
 import { Skills } from "./containers/Skills"
@@ -14,12 +12,13 @@ import { Projects } from "./containers/Projects"
 import { ContentProjects } from "./components/ContentProjects"
 import { Contact } from "./containers/Contact"
 import { ContentContact } from "./components/ContentContact"
-import { FormPopUp } from "./components/FormPopUp"
 
 export const App = () => {
   const [showLoader, setShowLoader] = useState(true)
   const [hidingLoader, setHidingLoader] = useState(false)
   const [showApp, setShowApp] = useState(false)
+  const [showNavbar, setShowNavbar] = useState(true);
+
   
   useEffect(() => {
     
@@ -41,7 +40,7 @@ export const App = () => {
         <Loader hidingLoader={hidingLoader}/>
         : 
           <div className="onLoad">
-            <Header />
+            <Header showNavbar={showNavbar} setShowNavbar={setShowNavbar} />
 
             <Main>
               
@@ -62,7 +61,7 @@ export const App = () => {
               </Projects>
 
               <Contact>
-                <ContentContact />
+                <ContentContact setShowNavbar={setShowNavbar}  />
               </Contact>
 
             </Main>

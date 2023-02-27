@@ -17,6 +17,7 @@ export const ContentProjects = () => {
                 <img className='w-full h-full lg:min-w-[400px] lg:min-h-[300px] 2xl:min-w-[400px] 2xl:min-h-[300px]  transition-all duration-300 hover:scale-125' 
                   src={srcImage === "mobile" ? project.mobilePath : project.desktopPath} 
                   alt={project.name}
+                  loading="lazy"
                 />             
               </div>
               <div className='flex gap-5 text-center'>
