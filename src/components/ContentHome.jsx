@@ -27,7 +27,7 @@ export const ContentHome = ({showApp}) => {
             </h1>
             {showButtons && 
             <div className='flex  gap-8 pt-4 text-white font-bold md:w-full md:justify-start md:pl-20'>
-              <a href='/assets/docs/CVJuanGualdronSpanish.pdf' target="_blank" rel='noopener noreferrer' className='
+              <a href='assets/docs/CVJuanGualdronSpanish.pdf' target="_blank" rel='noopener noreferrer' className='
               onLoad home-buttons h-14 bg-[#160d45] rounded-lg border-2 transition-all duration-350 text-center p-[13px] md:p-4
               md:w-48 md:text-xl md:h-16 hover:opacity-50' 
               >Currículum</a>
@@ -44,7 +44,7 @@ export const ContentHome = ({showApp}) => {
               min-w-[80px] min-h-[50px] max-w-[100px] max-h-[100px] 
               md:max-w-[200px] md:max-h-[170px] 
               lg:max-w-[300px] lg:max-h-[200px]
-              z-20' src="/assets/images/robot.png" alt="Profile image animated" />
+              z-20' src="assets/images/robot.png" alt="Profile image animated" />
           </div>
           <a className='absolute bottom-5' href="#aboutme">
             <svg className='w-12  text-white  fill-current first-load transition-all duration-300 md:w-16 hover:text-[#ed05f9]' viewBox="0 0 66.915 66.915" >
