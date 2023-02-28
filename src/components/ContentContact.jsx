@@ -4,7 +4,7 @@ import { useSentForm } from '../hooks/useSentForm'
 import { useIsVisible } from '../hooks/useIsVisible'
 
 export const ContentContact = ({setShowNavbar}) => {
-  const {ref, isVisible} = useIsVisible()
+  const {ref, isVisible} = useIsVisible(0.4)
   const form = useRef()
   
   const {

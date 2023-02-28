@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useIsVisible } from '../hooks/useIsVisible'
 
 export const ContentAboutMe = () => {
-  const {ref, isVisible} = useIsVisible()
+  const {ref, isVisible} = useIsVisible(0.3)
   return (
     <div ref={ref} className={`w-full flex flex-col gap-4 lg:gap-7 ${
       isVisible ? 'opacity-100 transition-opacity duration-1000' : 'opacity-0'

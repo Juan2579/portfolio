@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <footer className="w-full h-auto flex justify-center items-center py-8 bg-[#2C1A8A] text-white">
       <section className="flex flex-col items-center justify-center gap-4">
-        <p className="font-bold text-xl  lg:text-2xl">
+        <p className="text-center font-bold text-xl  lg:text-2xl">
           Desarrollado por Juan Gualdron
         </p>
         <div className="flex gap-4">

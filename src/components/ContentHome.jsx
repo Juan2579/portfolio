@@ -8,7 +8,7 @@ export const ContentHome = ({showApp}) => {
   return (
     <>
       {showApp &&
-        <div className='w-full flex flex-col-reverse items-center justify-center gap-10 px-5 pb-10 sm:flex-row md:pb-0 md:px-10 xl:pr-36'>
+        <div className='w-full flex flex-col-reverse items-center justify-center gap-10 px-5 pb-16 sm:flex-row md:pb-0 md:px-10 xl:pr-36'>
           <div className='w-full min-w-[280px] min-h-[180px] flex flex-col items-center  px-5'>
             <h1 className="home-text min-w-[236px] min-h-[108px]  flex flex-col items-start text-3xl font-bold text-white font-orbitron md:mx-0 md:w-full md:text-4xl xl:text-6xl">
               <span className={`letters ${showApp && 'greeting-animation'}`}>
@@ -28,7 +28,7 @@ export const ContentHome = ({showApp}) => {
             {showButtons && 
             <div className='flex  gap-8 pt-4 text-white font-bold md:w-full md:justify-start md:pl-20'>
               <a href='assets/docs/CVJuanGualdronSpanish.pdf' target="_blank" rel='noopener noreferrer' className='
-              onLoad home-buttons h-14 bg-[#160d45] rounded-lg border-2 transition-all duration-350 text-center p-[13px] md:p-4
+              onLoad home-buttons h-14 bg-[#160d45] rounded-lg border-2 transition-all duration-350 text-center p-3 md:p-4
               md:w-48 md:text-xl md:h-16 hover:opacity-50' 
               >Currículum</a>
               <a href='#contact' className='

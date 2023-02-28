@@ -7,11 +7,11 @@ export const NavMobile = ({ navRef, showMenu, setShowMenu }) => {
       {showMenu && (
         <ul
           style={{ top: heightNav }}
-          className="absolute w-full flex justify-center items-center flex-col gap-10 text-white bg-[#2C1A8A] font-mono border-b-2 py-8 text-lg z-20"
+          className="absolute w-full flex justify-center items-center flex-col gap-10 text-white bg-[#2C1A8A] font-mono border-b-2 py-8 text-lg z-20 border-t "
         >
           <li onClick={() => setShowMenu(false)}>
             <a
-              className="first-load transition-all duration-300 hover:text-[#EB268F]"
+              className="first-load transition-all duration-200 hover:text-[#EB268F]"
               href="#aboutme"
             >
               Sobre mí
@@ -19,19 +19,19 @@ export const NavMobile = ({ navRef, showMenu, setShowMenu }) => {
           </li>
           <li onClick={() => setShowMenu(false)}>
             <a
-              className="first-load transition-all duration-300 hover:text-[#EB268F]"
+              className="first-load transition-all duration-200 hover:text-[#EB268F]"
               href="#skills"
             >
               Habilidades
             </a>
           </li>
           <li onClick={() => setShowMenu(false)}>
-            <a className="first-load transition-all duration-300 hover:text-[#EB268F]" href="#projects">
+            <a className="first-load transition-all duration-200 hover:text-[#EB268F]" href="#projects">
               Proyectos
             </a>
           </li>
           <li onClick={() => setShowMenu(false)}>
-            <a className="first-load transition-all duration-300 hover:text-[#EB268F]" href="#contact">
+            <a className="first-load transition-all duration-200 hover:text-[#EB268F]" href="#contact">
               Contáctame
             </a>
           </li>
