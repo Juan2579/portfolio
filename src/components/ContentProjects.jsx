@@ -1,13 +1,15 @@
 import React from 'react'
 import { projects } from '../data/projects'
 import { useImageSrc } from '../hooks/useImageSrc'
+import { useIsVisible } from '../hooks/useIsVisible'
 
 export const ContentProjects = () => {
+  const {ref, isVisible} = useIsVisible(0.1)
   const { srcImage } = useImageSrc()
   return (
-    <div className='w-full flex flex-col gap-8 lg:gap-7'>
+    <div ref={ref} className={`w-full flex flex-col gap-8 lg:gap-7 ${ isVisible ? 'opacity-100 transition-opacity duration-1000' : 'opacity-0'}`}>
       <h2 className='text-xl font-bold underline underline-offset-8 decoration-[#ed05f9] pl-6 lg:pl-0 md:text-2xl  lg:text-3xl lg:pt-8 xl:pt-12 xl:text-4xl'>Proyectos</h2>
-      <ul className='w-full flex items-center justify-center flex-wrap gap-7 px-5 lg:px-0'>
+      <ul className='w-full flex items-center justify-center flex-wrap gap-7 px-5 lg:px-0 2xl:gap-20'>
         {projects.map((project, index) => {
           return (
             <li key={`${project}-${index}`} className='max-w-[450px] h-auto flex flex-col items-center bg-[#0e0d10] gap-3 py-4 px-3 bg-clip-padding bg-opacity-40 rounded-xl shadow-2xl md:max-w-[350px] lg:max-w-[450px] lg:min-h-[540px] lg:gap-5 xl:min-h-[560px] 2xl:max-w-[450px] 2xl:min-h-[530px]'  style={{backdropFilter: "blur(5px)"}}>

@@ -12,6 +12,7 @@ import { Projects } from "./containers/Projects"
 import { ContentProjects } from "./components/ContentProjects"
 import { Contact } from "./containers/Contact"
 import { ContentContact } from "./components/ContentContact"
+import { Footer } from "./layout/Footer"
 
 export const App = () => {
   const [showLoader, setShowLoader] = useState(true)
@@ -65,6 +66,8 @@ export const App = () => {
               </Contact>
 
             </Main>
+
+            <Footer />
           </div>
       }
     </>

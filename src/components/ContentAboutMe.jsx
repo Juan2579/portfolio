@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useIsVisible } from '../hooks/useIsVisible'
 
 export const ContentAboutMe = () => {
+  const {ref, isVisible} = useIsVisible()
   return (
-    <div className='w-full flex flex-col gap-4 lg:gap-7'>
+    <div ref={ref} className={`w-full flex flex-col gap-4 lg:gap-7 ${
+      isVisible ? 'opacity-100 transition-opacity duration-1000' : 'opacity-0'
+      }`}>
       <h2 className='text-xl font-bold underline underline-offset-8 decoration-[#ed05f9] md:text-2xl lg:text-3xl lg:pt-4 xl:text-4xl'>Sobre mí</h2>
       <p className='text-gray-300 text-md pb-4 md:text-lg lg:text-xl xl:text-2xl'>
         Soy un apasionado por el <span className='text-[#ed05f9]'>desarrollo web</span> y el mundo de la <span className='text-[#ed05f9]'>programación</span>. Mi interés por esta profesión empezó hace dos años cuando escribí mi primer linea de código, desde entonces me he enfocado en desarrollar <span className='text-[#ed05f9]'>aplicaciones web</span>  eficaces, accesibles y divertidos. Tengo habilidades para resolver problemas, encontrar nuevos desafios y aprender diariamente.

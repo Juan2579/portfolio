@@ -1,9 +1,13 @@
 import React from 'react'
 import { technologies } from '../data/technologies'
+import { useIsVisible } from '../hooks/useIsVisible'
 
 export const ContentSkills = () => {
+  const {ref, isVisible} = useIsVisible()
   return (
-    <div className='w-full flex flex-col gap-4 lg:gap-7'>
+    <div ref={ref} className={`w-full flex flex-col gap-4 lg:gap-7 ${
+      isVisible ? 'opacity-100 transition-opacity duration-1000' : 'opacity-0'
+      }`}>
       <h2 className='text-xl font-bold underline underline-offset-8 decoration-[#ed05f9] md:text-2xl lg:text-3xl lg:pt-8 xl:text-4xl'>Habilidades</h2>
       <div className='w-full h-auto flex flex-col lg:gap-4 lg:flex-row lg:items-start'>
         <div className='skills-container lg:flex lg:flex-col lg:gap-5'>

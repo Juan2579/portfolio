@@ -1,72 +1,37 @@
-import React, { useRef, useState } from 'react'
-import emailjs from "@emailjs/browser"
+import React, { useRef } from 'react'
 import { FormPopUp } from './FormPopUp'
+import { useSentForm } from '../hooks/useSentForm'
+import { useIsVisible } from '../hooks/useIsVisible'
 
 export const ContentContact = ({setShowNavbar}) => {
+  const {ref, isVisible} = useIsVisible()
   const form = useRef()
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [message, setMessage] = useState("")
-  const [popUp, setPopUp] = useState(false)
-  const [modal, setModal] = useState(false)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(false)
+  
+  const {
+  formVariables: {
+    name, 
+    setName,
+    email,
+    setEmail,
+    message, 
+    setMessage,
+    onSubmit,
+    loading,
+    error
+  }, 
+  modalVariables: {
+    closeModal,
+    popUp, 
+    modal
+  } 
+  } = useSentForm({form, setShowNavbar})
 
-  const onSubmit = async(e) => {
-    e.preventDefault()
-    //hide the navbar to block the navigation
-    setShowNavbar(false)
-    try {
-      //show modal
-      setModal(true) 
-
-      //Reseting loading and error by default
-      setError(false)
-      setLoading(true)
-      
-      //start sending email
-      const send = await emailjs.sendForm(
-        "service_3g07nm4", //service id
-        "template_ui8zysa", //template id
-        form.current,
-        "HopZexMN1iY-mKCN6" // public key
-      )
-        
-      // Email sent and stop loading
-      setLoading(false) 
-
-      //modal with popup animation
-      document.body.classList.add("stop-scroll")
-      setTimeout(() => {
-        setPopUp(true)
-      }, 100)
-      
-      //Clean the form inputs
-      setName("")
-      setEmail("")
-      setMessage("")
-      
-    } catch (error) {
-      setModal(true)
-      setError(true)
-      setLoading(false)
-      
-      //modal with popup animation
-      document.body.classList.add("stop-scroll")
-      setTimeout(() => {
-        setPopUp(true)
-      }, 100)
-    } 
-  }
-  const closeModal = () => {
-    setModal(false)
-    setPopUp(false)
-    document.body.classList.remove("stop-scroll")
-  }
   return (
-    <div className='w-full flex flex-col gap-6 lg:gap-7'>
+    <div ref={ref} className={`w-full flex flex-col gap-6 lg:gap-7 ${
+      isVisible ? 'opacity-100 transition-opacity duration-1000' : 'opacity-0'
+      }`}>
       <h2 className='text-xl font-bold underline underline-offset-8 decoration-[#ed05f9] md:text-2xl lg:text-3xl lg:pt-8 xl:text-4xl'>Contacto</h2>
-      <form ref={form} onSubmit={e => onSubmit(e)} className='w-full max-w-[500px] mx-auto flex flex-col gap-4 bg-[#0e0d10] bg-clip-padding bg-opacity-40 rounded-xl shadow-2xl px-5 py-8' style={{backdropFilter: "blur(5px)"}}>
+      <form ref={form} onSubmit={e => onSubmit(e)} className='w-full max-w-[500px] mx-auto flex flex-col gap-4 bg-[#0e0d10] bg-clip-padding bg-opacity-40 rounded-xl shadow-2xl px-5 py-8 mb-10' style={{backdropFilter: "blur(5px)"}}>
         <p className='text-lg font-bold mx-auto text-center'>¿Quieres que trabajemos juntos?</p>
         <p className='mx-auto'>¡Envíame un mensaje!</p>
         <div className="mb-6">
