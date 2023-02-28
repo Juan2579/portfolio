@@ -8,7 +8,7 @@ export const ContentHome = ({showApp}) => {
   return (
     <>
       {showApp &&
-        <div className='w-full flex flex-col-reverse items-center justify-center gap-10 px-5 pb-16 sm:flex-row md:pb-0 md:px-10 xl:pr-36'>
+        <div className='w-full flex flex-col-reverse items-center justify-center gap-10 px-5 pb-24 sm:flex-row md:pb-0 md:px-10 xl:pr-36'>
           <div className='w-full min-w-[280px] min-h-[180px] flex flex-col items-center  px-5'>
             <h1 className="home-text min-w-[236px] min-h-[108px]  flex flex-col items-start text-3xl font-bold text-white font-orbitron md:mx-0 md:w-full md:text-4xl xl:text-6xl">
               <span className={`letters ${showApp && 'greeting-animation'}`}>
