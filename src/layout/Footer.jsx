@@ -2,7 +2,7 @@ import React from "react";
 
 export const Footer = () => {
   return (
-    <footer className="w-full h-auto flex justify-center items-center py-8 bg-[#2C1A8A] text-white">
+    <footer className="w-full h-auto flex justify-center items-center py-8 px-4 bg-[#2C1A8A] text-white">
       <section className="flex flex-col items-center justify-center gap-4">
         <p className="text-center font-bold text-xl  lg:text-2xl">
           Desarrollado por Juan Gualdron
